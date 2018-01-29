@@ -22,21 +22,11 @@ _Tesla_
 
 | Model	                           | View                                     | Controller                           |
 | :------------------------------: |:----------------------------------------:| :-----------------------------------:|
-| relié à la base de donnée (B.D.D)| La View c'est ce que l'utilisateur voit ! | c'est la tour de contrôle ! |
-| Back-end                         | La View c'est Front-end                   | c'est l'articulation entre le le Model et le View |
-| l'arrière boutique               | La view c'est le rayonnage en boutique    | c'est le transpalette qui achemine ce qui est stocké en arrière boutique pour le mettre en rayonnage pour l'utilisateur. |
+| relié à la base de donnée (B.D.D)| c'est ce que l'utilisateur voit !        | c'est la tour de contrôle ! |
+| Back-end                         | c'est Front-end                          | c'est l'articulation entre le le Model et le View |
+| l'arrière boutique               | c'est le rayonnage en boutique           | c'est le transpalette qui achemine ce qui est stocké en arrière boutique pour le mettre en rayonnage pour l'utilisateur. |
 
-- Le Model c'est relié à la base de donnée (B.D.D)
-- Le Model c'est Back-end
-- Le Model c'est l'arrière boutique
 
-- La View c'est ce que l'utilisateur voit ! 
-- La View c'est Front-end
-- La view c'est le rayonnage en boutique
-
-- Le Controller c'est la tour de contrôle !
-- Le Controller c'est l'articulation entre le le Model et le View
-- Le Controller c'est le transpalette qui achemine ce qui est stocké en arrière boutique pour le mettre en rayonnage pour l'utilisateur. 
 
 **Tout se beau monde se retrouve dans le dossier App**
 
