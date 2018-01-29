@@ -21,7 +21,7 @@ _Tesla_
 ## MVC : Model View Controller
 
 | Model	                           | View                                     | Controller                           |
-| -------------------------------- |:----------------------------------------:| ------------------------------------:|
+| :------------------------------: |:----------------------------------------:| :-----------------------------------:|
 | relié à la base de donnée (B.D.D)| La View c'est ce que l'utilisateur voit ! | c'est la tour de contrôle ! |
 | Back-end                         | La View c'est Front-end                   | c'est l'articulation entre le le Model et le View |
 | l'arrière boutique               | La view c'est le rayonnage en boutique    | c'est le transpalette qui achemine ce qui est stocké en arrière boutique pour le mettre en rayonnage pour l'utilisateur. |
