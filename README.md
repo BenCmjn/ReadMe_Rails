@@ -17,7 +17,7 @@ _Caisse à savons_
 Dynamique : Affichage de contenus sur un BDD grace à pleins d'autres langages qui permettent d'afficher du contenu EN FONCTION des utilisateurs.
 _Tesla_
 
-## MVC : Model View Controller
+## MVC : Model View Controller :steam_locomotive:
 
 | Model	                           | View                                     | Controller                           |
 | :------------------------------: |:----------------------------------------:| :-----------------------------------:|
@@ -26,7 +26,7 @@ _Tesla_
 | l'arrière boutique               | c'est le rayonnage en boutique           | c'est le transpalette qui achemine ce qui est stocké en arrière boutique pour le mettre en rayonnage pour l'utilisateur. |
 
 
-**Tout se beau monde se retrouve dans le dossier App**
+** :rowboat: Tout se beau monde se retrouve dans le dossier App :rocket: **
 
 En plus il y a (par ordre d'importance) :
 - Config
@@ -42,7 +42,7 @@ En plus il y a (par ordre d'importance) :
 - Tmp
 - Rend
 
-## Le Routeurs et les Routes
+## Le Routeurs et les Routes :roller_coaster:
 
 On est dans `Config/route.rb`
 `rails routes` pour voir toutes les routes dans Ruby
@@ -56,7 +56,7 @@ Par exemple : L'utilisateur veut aller au rayon "Welcome" donc le routeur va dir
 
 
 
-## Les Bases de Données (et le Models)
+## Les Bases de Données (et le Models) :factory:
 
 #### Une BDD c'est un gros excel.
 Où chaque cellule est une data. Cette data correspond forcément à une rangée et une colonne et est dans une feuille de l'excel.
@@ -97,7 +97,7 @@ GET
 
 C'est là qu'on va permettre d'**intéragir avec la BDD par l'interface**, et pas ~~en tapant une ligne de commande dans la console~~ !
 
-## bonus : VIEW
+## bonus : VIEW :gem:
 
 c'est de l'html un peu spécial, dans le sens où les balise ressemblent à ça `<=% … %=>` ou ça `<% … %>` plutôt qu'à ça `< … >`
 Tout ce qu'il y a dans une balise ERB : `<=% C'est du code Ruby ici %=>`
