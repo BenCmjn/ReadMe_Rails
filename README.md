@@ -1,13 +1,12 @@
 # ReadMe_Rails
 
-+ La différence entre un site statique et un site dynamique
-+ Le MVC
-+ Les routes
-+ Les Bases de Données
-+ GET / POST
-+ Le concept de migration
-+ Les relations entre les models des BDD
-+ Les fonctions du CRUD
++ [La différence entre un site statique et un site dynamique](https://github.com/BenCmjn/ReadMe_Rails#statique--dynamique)
++ [Le MVC](https://github.com/BenCmjn/ReadMe_Rails#mvc--model-view-controller)
++ [Les routes](https://github.com/BenCmjn/ReadMe_Rails#le-routeurs-et-les-routes)
++ [Les Bases de Données(BDD)](https://github.com/BenCmjn/ReadMe_Rails#les-bases-de-donn%C3%A9es-et-le-models)
++ [GET / POST](https://github.com/BenCmjn/ReadMe_Rails#get--post)
++ [Le concept de migration](https://github.com/BenCmjn/ReadMe_Rails#migration)
++ [Les bonus] VIEW  CRUD  FLOW  SAFE
 
 ## Statique ≠ Dynamique
 
@@ -81,11 +80,6 @@ La migration ça sert à **modifier** la BDD. C'est à dire :
 - Faire du lien entre les tables.
 
 
-## CRUD = Create Read Update Destroy
-
-#### C'est là qu'on va permettre d'intéragir avec la BDD par l'interface, et pas ~~en tapant une ligne de commande dans la console~~ !
-
-
 ## GET / POST
 
 GET 
@@ -99,7 +93,9 @@ GET
 | DELETE        |                                |`delete` ?  |
 
 
+## bonus : CRUD = Create Read Update Destroy
 
+C'est là qu'on va permettre d'**intéragir avec la BDD par l'interface**, et pas ~~en tapant une ligne de commande dans la console~~ !
 
 ## bonus : VIEW
 
@@ -118,7 +114,7 @@ Différence entre `<=% … %=>` et `<% … %>` :
 | Exemple   | @articles.title| .each do …     | préfix_path(prefix)
 
 
-## Exemple d'un flow typique :
+## bonus : Exemple d'un flow typique :
 
 L'utilisateur veut aller sur l'article 1 (http://monsite.com/articles/1) :
 1. L Routeur : `GET` -> `ressources :articles` (le chemin "articles/:id" va renvoyer à la méthode "show" du controller)
@@ -130,13 +126,13 @@ L'utilisateur veut aller sur l'article 1 (http://monsite.com/articles/1) :
 6.  Le controller donne le tout à l'utilisateur !
 BOUM !
 
-## Un peu de sécurité
+## bonus Safety First !
 
 Faire attention quand on a des inputs, ne pas permettre à un petit malin de passer administrateur en faisant
 Pour ça on fait une classe `private` dans le controller de notre input 
 
 
-#### note pour plus tard :
+#### note pour plus tard (à réviser) :
 
 - Voir les `Authenticity token`
 - `rails generates controller Welcome index`
