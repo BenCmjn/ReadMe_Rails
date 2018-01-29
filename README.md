@@ -139,8 +139,5 @@ Pour ça on fait une classe `private` dans le controller de notre input
 - `ressources :articles`
 - `Article**.find()**`
 
-
-
-
-
+[![La vidéo youtube de Féfé](http://img.youtube.com/vi/deNytSPvAxA/0.jpg)](http://www.youtube.com/watch?v=deNytSPvAxA)
 
