@@ -35,9 +35,7 @@ En plus il y a (par ordre d'importance) :
 - Routes
 - Asset : pour le JS, le CSS, et les IMG
 - Test (pour tester si ça marche bien, t
-
 - Bin
-
 - Lib : les librairies externes
 - Log : le journal de modifications (blog technique)
 - Public :
@@ -48,15 +46,14 @@ En plus il y a (par ordre d'importance) :
 ## Le Routeurs et les Routes
 
 On est dans `Config/route.rb`
+`rails routes` pour voir toutes les routes dans Ruby
 
-#### Les routes c'est les couloirs dans lesquels se balade l'utilisateur.
-Et c'est le routeur qui construit les routes. Imagine une route qui se construit sous tes pas. Des rayonnages qui se remplissent au fur et à mesure que tu marche dans la boutique.
+
+#### Les routes c'est ce qui définit ce que l'utilisateur peut faire sur les chemins sur lesquels il se balade
+Et c'est le routeur qui construit les routes, les chemins. Imagine une route qui se construit sous tes pas. Des rayonnages qui se remplissent au fur et à mesure que tu marche dans la boutique.
 C'est le routeur qui appelle le controller (le transpalette) qui va appeller le modèle (le carton en BDD) pour ensuite afficher la data en view (le rayonnage).
 
-Par exemple : L'utilisateur veut aller au rayon "Welcome" donc le routeur va dire `get 'welcome'` au controlleur pour qu'il lui renvoit l'index de welcome `to: 'welcome#index'`  
-
-
-`rails routes` pour voir toutes les routes dans Ruby
+Par exemple : L'utilisateur veut aller au rayon "Welcome" donc le routeur va dire `get 'welcome'` au controlleur pour qu'il lui renvoit l‘"index de welcome" `to: 'welcome#index'`  
 
 
 
@@ -70,7 +67,7 @@ Où chaque cellule est une data. Cette data correspond forcément à une rangée
 
 Modeliser une base de donnée :
 
-Créer les différentes feuilles de l'excel. Et 
+Créer les différentes feuilles de l'excel. Et… 
 
 
 
@@ -87,7 +84,6 @@ La migration ça sert à **modifier** la BDD. C'est à dire :
 ## CRUD = Create Read Update Destroy
 
 #### C'est là qu'on va permettre d'intéragir avec la BDD par l'interface, et pas ~~en tapant une ligne de commande dans la console~~ !
-Parce qu'on est pas des robots bordel !
 
 
 ## GET / POST
@@ -105,17 +101,22 @@ GET
 
 
 
-
-
-
 ## bonus : VIEW
 
-c'est de l'html un peu spécial, dans le sens où les balise ressemblent à ça `<=% … %=>` plutôt qu'à ça `< … >`
-Tout ce qu'il y a dans une balise ERB : `<=% C'est du Ruby ici %=>`
+c'est de l'html un peu spécial, dans le sens où les balise ressemblent à ça `<=% … %=>` ou ça `<% … %>` plutôt qu'à ça `< … >`
+Tout ce qu'il y a dans une balise ERB : `<=% C'est du code Ruby ici %=>`
+ERB = "Embedded RuBy" = Du Ruby dans de l'html.
 
 Et en fait le ruby est **dans** l'html, genre :
-`<h1><=% @article.title %=></h1>
-<p><=% @article.text %=></p>`
+`<h1> <=% @article.title %=> </h1>
+<p> <=% @article.text %=> </p>`
+
+Différence entre `<=% … %=>` et `<% … %>` :
+
+|`<=% … %=>`     | `<% … %>`      | link_to 'le texte du liens' |
+| :--------:     | :-------------:| :-------------------------: |
+| S'affichera    | S'affichera pas| Équivalent de `href` en html|
+| @articles.title| .each do …     | préfix_path(prefix)
 
 
 ## Exemple d'un flow typique :
@@ -130,7 +131,10 @@ L'utilisateur veut aller sur l'article 1 (http://monsite.com/articles/1) :
 6.  Le controller donne le tout à l'utilisateur !
 BOUM !
 
+## Un peu de sécurité
 
+Faire attention quand on a des inputs, ne pas permettre à un petit malin de passer administrateur en faisant
+Pour ça on fait une classe `private` dans le controller de notre input 
 
 
 #### note pour plus tard :
@@ -138,6 +142,7 @@ BOUM !
 - Voir les `Authenticity token`
 - `rails generates controller Welcome index`
 - `ressources :articles`
+- `Article**.find()**`
 
 
 
