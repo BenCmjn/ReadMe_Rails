@@ -112,10 +112,10 @@ Et en fait le ruby est **dans** l'html, genre :
 
 Différence entre `<=% … %=>` et `<% … %>` :
 
-|`<=% … %=>`     | `<% … %>`      | link_to 'le texte du liens' |
-| :--------:     | :-------------:| :-------------------------: |
-| S'affichera    | S'affichera pas| Équivalent de `href` en html|
-| @articles.title| .each do …     | préfix_path(prefix)
+| Code      |`<=% … %=>`     | `<% … %>`      | link_to 'le texte du liens' |
+| --------- | :--------:     | :-------------:| :-------------------------: |
+| Action    | S'affichera    | S'affichera pas| Équivalent de `href` en html|
+| Exemple   | @articles.title| .each do …     | préfix_path(prefix)
 
 
 ## Exemple d'un flow typique :
