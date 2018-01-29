@@ -54,11 +54,6 @@ Et c'est le routeur qui construit les routes. Imagine une route qui se construit
 C'est le routeur qui appelle le controller (le transpalette) qui va appeller le modèle (le carton en BDD) pour ensuite afficher la data en view (le rayonnage).
 
 Par exemple : L'utilisateur veut aller au rayon "Welcome" donc le routeur va dire `get 'welcome'` au controlleur pour qu'il lui renvoit l'index de welcome `to: 'welcome#index'`  
-  
-
-Note pour plus tard :
-- `rails generates controller Welcome index`
-- `ressources :articles`
 
 
 `rails routes` pour voir toutes les routes dans Ruby
@@ -120,11 +115,29 @@ Tout ce qu'il y a dans une balise ERB : `<=% C'est du Ruby ici %=>`
 
 Et en fait le ruby est **dans** l'html, genre :
 `<h1><=% @article.title %=></h1>
-<h2><=% @article.text %=></h2>`
+<p><=% @article.text %=></p>`
 
 
-#### note pour plus tard : voir les `Authenticity token`
+## Exemple d'un flow typique :
 
+L'utilisateur veut aller sur l'article 1 (http://monsite.com/articles/1) :
+1. L Routeur : `GET` -> `ressources :articles` (le chemin "articles/:id" va renvoyer à la méthode "show" du controller)
+2. Le controller : il a une méthode "show" dans lequel il a
+`@article = Article.find(params[:id])`
+3. Le Modèle : va renvoyer la data en BDD
+4. Le controller : va 'injecter' ça dans la view, où il y a du html et qui va afficher ça.
+5. Le view a besoin de ses balises chelous pour réceptionner la data dans ses balises html, et renvoie tout l'HTML au controller
+6.  Le controller donne le tout à l'utilisateur !
+BOUM !
+
+
+
+
+#### note pour plus tard :
+
+- Voir les `Authenticity token`
+- `rails generates controller Welcome index`
+- `ressources :articles`
 
 
 
