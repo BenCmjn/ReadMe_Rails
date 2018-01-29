@@ -56,7 +56,13 @@ C'est le routeur qui appelle le controller (le transpalette) qui va appeller le 
 Par exemple : L'utilisateur veut aller au rayon "Welcome" donc le routeur va dire `get 'welcome'` au controlleur pour qu'il lui renvoit l'index de welcome `to: 'welcome#index'`  
   
 
-Note pour plus tard : `rails generates controller Welcome index`
+Note pour plus tard :
+- `rails generates controller Welcome index`
+- `ressources :articles`
+
+
+`rails routes` pour voir toutes les routes dans Ruby
+
 
 
 ## Les Bases de Données (et le Models)
@@ -83,12 +89,23 @@ La migration ça sert à **modifier** la BDD. C'est à dire :
 - Faire du lien entre les tables.
 
 
-## Create Read Update Destroy CRUD !!
+## CRUD = Create Read Update Destroy
 
 #### C'est là qu'on va permettre d'intéragir avec la BDD par l'interface, et pas ~~en tapant une ligne de commande dans la console~~ !
 Parce qu'on est pas des robots bordel !
 
 
+## GET / POST
+
+GET 
+
+| Method        | Action                         | Code       |
+| ------------: | -------------                  | -----      |
+| GET           | Renvoie la data au user        |            |
+| POST          | L'utilisateur crée la data     |`create`    |
+| PUT           |                                |            |
+| PATCH         |                                |`update` ?  |
+| DELETE        |                                |`delete` ?  |
 
 
 
@@ -96,9 +113,17 @@ Parce qu'on est pas des robots bordel !
 
 
 
+## bonus : VIEW
+
+c'est de l'html un peu spécial, dans le sens où les balise ressemblent à ça `<=% … %=>` plutôt qu'à ça `< … >`
+Tout ce qu'il y a dans une balise ERB : `<=% C'est du Ruby ici %=>`
+
+Et en fait le ruby est **dans** l'html, genre :
+`<h1><=% @article.title %=></h1>
+<h2><=% @article.text %=></h2>`
 
 
-
+#### note pour plus tard : voir les `Authenticity token`
 
 
 
