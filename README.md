@@ -99,16 +99,16 @@ C'est là qu'on va permettre d'**intéragir avec la BDD par l'interface**, et pa
 
 ## bonus : VIEW :gem:
 
-c'est de l'html un peu spécial, dans le sens où les balise ressemblent à ça `<=% … %=>` ou ça `<% … %>` plutôt qu'à ça `< … >`
-Tout ce qu'il y a dans une balise ERB : `<=% C'est du code Ruby ici %=>`
+c'est de l'html un peu spécial, dans le sens où les balise ressemblent à ça `<%= … =%>` ou ça `<% … %>` plutôt qu'à ça `< … >`
+Tout ce qu'il y a dans une balise ERB : `<%= C'est du code Ruby ici =%>`
 ERB = "Embedded RuBy" = Du Ruby dans de l'html.
 
 Et en fait le ruby est **dans** l'html, genre :
-`<h1> <=% @article.title %=> </h1> <p> <=% @article.text %=> </p>`
+`<h1> <%= @article.title =%> </h1> <p> <%= @article.text =%> </p>`
 
-Différence entre `<=% … %=>` et `<% … %>` :
+Différence entre `<%= … =%>` et `<% … %>` :
 
-| Code      |`<=% … %=>`     | `<% … %>`      | link_to 'le texte du liens' |
+| Code      |`<%= … =%>`     | `<% … %>`      | link_to 'le texte du liens' |
 | --------- | :--------:     | :-------------:| :-------------------------: |
 | Action    | S'affichera    | S'affichera pas| Équivalent de `href` en html|
 | Exemple   | @articles.title| .each do …     | préfix_path(prefix)
