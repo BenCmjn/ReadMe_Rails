@@ -61,13 +61,15 @@ Par exemple : L'utilisateur veut aller au rayon "Welcome" donc le routeur va dir
 #### Une BDD c'est un gros excel.
 Où chaque cellule est une data. Cette data correspond forcément à une rangée et une colonne et est dans une feuille de l'excel.
 
-#### Une BDD relationnelle c'est un excel en 3D.
+#### Une BDD relationnelle c'est une sorte d‘excel en 3D.
 **Imagine ça :** Une cellule ne se réfère pas qu'à une colonne et une rangée, mais peut t'envoyer vers une autre feuille de l'excel, avec une autre colonne et une autre rangée. C'est *un nœud*. 
 
+#### Comment se retrouver dans la base de donnée ?
+-> Dans le dossier db : il y a le fichier "Schema.rb"
+-> Et faire un ptit `rails route` (`rails r` doit marcher je pense) pour retrouver sa route.
+
 Modeliser une base de donnée :
-
-Créer les différentes feuilles de l'excel. Et… 
-
+…à compléter
 
 
 ## Migration
@@ -134,10 +136,12 @@ Pour ça on fait une classe `private` dans le controller de notre input
 
 #### note pour plus tard (à réviser) :
 
-- Voir les `Authenticity token`
+- Voir les `Authenticity token` (pour la sécurité ?)
 - `rails generates controller Welcome index`
 - `ressources :articles`
 - `Article**.find()**`
+
+- `Unpermitted parameter: :name`
 
 [![La vidéo youtube de Féfé](http://img.youtube.com/vi/deNytSPvAxA/0.jpg)](http://www.youtube.com/watch?v=deNytSPvAxA)
 
